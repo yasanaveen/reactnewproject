@@ -70,7 +70,7 @@ const Sidebar = () => {
     if (deltaY > 30 && !isExpanded) { // Expand only if not already expanded
       setIsExpanded(true);
       console.log('Expanded: true');
-    } else if (deltaY < -30 && isExpanded) { // Collapse only if expanded
+    } else if (deltaY < -30 && isExpanded) {   // Collapse only if expanded
       setIsExpanded(false);
       console.log('Expanded: false');
     }
@@ -92,8 +92,8 @@ const Sidebar = () => {
           padding: 9px;
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
           position: fixed;
-          left: 0;
-          top: 59px; /* Start after the header */
+          left: 5px;
+          top: 60px; /* Start after the header */
           z-index: 1000;
           transition: transform 0.3s ease-in-out, height 0.3s ease-in-out; /* Smooth transition */
         }
@@ -106,7 +106,7 @@ const Sidebar = () => {
  
         .menu-list {
           list-style: none;
-          padding: 0;
+          padding: 3px;
           margin: 0;
           display: flex;
           flex-direction: column; /* Vertical for sidebar */

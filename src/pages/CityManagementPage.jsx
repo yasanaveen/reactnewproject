@@ -1053,8 +1053,8 @@ const CityManagementPage = () => {
           opacity: 0.9;
         }
           @media (max-width: 1440px) {
-  .table-inner {
-    min-width: 600px; /* Reduce min-width to fit better */
+     .table-inner {
+      min-width: 600px; /* Reduce min-width to fit better */
   }
 }
 

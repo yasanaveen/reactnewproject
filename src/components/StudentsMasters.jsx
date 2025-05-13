@@ -102,17 +102,37 @@ const StudentsMasters = () => {
         }
 
         .right-section {
-          flex: 2;
-          width:340px;
-          height:210px;
-          top:232px;
-          left:10px;
-          gap:5px;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 12px 8px;
-          min-width: 200px;
-        }
+            display: flex;
+            flex-wrap: wrap;
+              gap: 5px;
+              max-width: 517px;
+              width: 460px;
+            padding: 24px;
+             background-color: white;
+             border-radius: 25px;
+              margin: 0 auto; /* This centers the container horizontally */
+}
+
+/* Media query for responsive/mobile view */
+@media (max-width: 768px) {
+  .right-section {
+    width: 90%; /* Take up most of the screen width but leave some margin */
+    max-width: 100%; /* Allow the container to shrink on very small screens */
+    justify-content: center; /* Center the flex items horizontally */
+    align-items: center; /* Center the flex items vertically */
+    padding: 16px; /* Slightly smaller padding on mobile */
+    margin-top: 15px; /* Add some space at the top */
+    margin-bottom: 15px; /* Add some space at the bottom */
+  }
+}
+
+/* For extra small screens */
+@media (max-width: 480px) {
+  .right-section {
+    width: 95%; /* Take up even more of the screen width */
+    padding: 12px; /* Even smaller padding on very small screens */
+  }
+}
 
         .title {
           font-size: 24px;
