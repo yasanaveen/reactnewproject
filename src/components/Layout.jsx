@@ -199,7 +199,7 @@ const Sidebar = () => {
             display: grid;
             grid-template-columns: repeat(5, 1fr); /* 5 columns */
             grid-template-rows: ${isExpanded ? 'repeat(3, 60px)' : '60px'}; /* 3 rows when expanded, 1 when collapsed */
-            gap: 5px; /* Space between grid items */
+            gap: 1px; /* Space between grid items */
             height: 100%;
             overflow: hidden; /* Prevent scrolling in collapsed state */
             align-content: start; /* Align items to top */
