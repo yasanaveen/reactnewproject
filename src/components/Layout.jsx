@@ -89,11 +89,11 @@ const Sidebar = () => {
           width: 260px;
           min-height: calc(100vh - 60px);
           background: linear-gradient(90deg, #FFFFFF 0%, #FAFAFB 100%);
-          padding: 9px;
+          
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
           position: fixed;
           left: 5px;
-          top: 60px; /* Start after the header */
+          top: 68px; /* Start after the header */
           z-index: 1000;
           transition: transform 0.3s ease-in-out, height 0.3s ease-in-out; /* Smooth transition */
         }
