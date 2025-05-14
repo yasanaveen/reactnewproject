@@ -131,6 +131,7 @@ const StudentsMasters = () => {
   .right-section {
     width: 95%; /* Take up even more of the screen width */
     padding: 12px; /* Even smaller padding on very small screens */
+    margin-right:60px;
   }
 }
 

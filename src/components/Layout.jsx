@@ -185,7 +185,7 @@ const Sidebar = () => {
             background: #fff;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
             padding: 5px;
-            transform: ${isExpanded ? 'translateY(0)' : 'translateY(calc(100% - 60px))'}; /* Slide up/down */
+            transform: ${isExpanded ? 'translateY(0)' : 'translateY(calc(100% - 90px))'}; /* Slide up/down */
             z-index: 1001; /* Above other content */
             transition: height 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions */
             background: #FFFFFF;
@@ -203,7 +203,7 @@ const Sidebar = () => {
             height: 100%;
             overflow: hidden; /* Prevent scrolling in collapsed state */
             align-content: start; /* Align items to top */
-            margin-top: 20px; /* Reserve space for drag message */
+            margin-top: 9px; /* Reserve space for drag message */
           }
  
           .menu-item {
