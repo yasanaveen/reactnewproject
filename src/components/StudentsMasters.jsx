@@ -127,11 +127,12 @@ const StudentsMasters = () => {
 }
 
 /* For extra small screens */
-@media (max-width: 480px) {
+@media (max-width: 425px) {
   .right-section {
     width: 95%; /* Take up even more of the screen width */
     padding: 12px; /* Even smaller padding on very small screens */
-    margin-right:60px;
+    margin-right:55px;
+    
   }
 }
 
