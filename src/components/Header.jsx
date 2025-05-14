@@ -112,7 +112,6 @@ const SearchIconStyled = styled(SearchIcon)`
   left: 12px;
   color: #A1A5B0;
   pointer-events: none;
-
   @media (max-width: 768px) {
     left: 8px;
   }
