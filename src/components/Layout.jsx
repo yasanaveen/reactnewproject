@@ -106,7 +106,7 @@ const Sidebar = () => {
  
         .menu-list {
           list-style: none;
-          padding: 3px;
+          padding: 7px;
           margin: 0;
           display: flex;
           flex-direction: column; /* Vertical for sidebar */
