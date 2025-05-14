@@ -259,7 +259,7 @@ const Sidebar = () => {
             text-align: center;
             font-size: 12px;
             color: #666;
-            background: rgba(255, 255, 255, 0.8);
+            
             padding: 2px 0;
             z-index: 1002; /* Above menu items */
             transition: opacity 0.3s ease-in-out;

@@ -107,7 +107,7 @@ const StudentsMasters = () => {
               gap: 5px;
               max-width: 517px;
               width: 460px;
-            padding: 24px;
+              padding: 24px;
              background-color: white;
              border-radius: 25px;
               margin: 0 auto; /* This centers the container horizontally */
