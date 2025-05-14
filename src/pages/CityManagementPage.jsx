@@ -690,6 +690,7 @@ const CityManagementPage = () => {
           margin: 0 auto;
           position: relative;
         }
+          
        
 
         .table-inner {
