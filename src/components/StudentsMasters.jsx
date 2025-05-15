@@ -1,7 +1,7 @@
 import React from 'react';
 import { Search } from 'lucide-react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import  StateIcon from '../Images/State.png';
+import StateIcon from '../Images/State.png';
 import GroupIcon from '../Images/Group.png';
 import CampusIcon from '../Images/Campus.png';
 import FeePaymentYearIcon from '../Images/FeePaymentYear.png';
@@ -23,6 +23,7 @@ const StudentsMasters = () => {
     {
       name: 'City',
       icon: <img src={GroupIcon} alt="City" style={{ width: 18, height: 18 }} />,
+      
       path: 'city'
     },
     {
@@ -80,7 +81,6 @@ const StudentsMasters = () => {
       <style>{`
         .students-masters {
           padding: 24px;
-          // background-color: rgba(255, 255, 255, 0.7);
           backdrop-filter: blur(16.2px);
           -webkit-backdrop-filter: blur(16.2px);
           border-radius: 12px;
@@ -92,49 +92,27 @@ const StudentsMasters = () => {
           justify-content: space-between;
           align-items: flex-start;
           flex-wrap: wrap;
-          gap: 400px;
+          gap: 20px;
           margin-bottom: 24px;
         }
 
         .left-section {
           flex: 1;
-          min-width: 410px;
+          min-width: 300px;
         }
 
         .right-section {
-            display: flex;
-            flex-wrap: wrap;
-              gap: 5px;
-              max-width: 517px;
-              width: 460px;
-              padding: 24px;
-             background-color: white;
-             border-radius: 25px;
-              margin: 0 auto; /* This centers the container horizontally */
-}
-
-/* Media query for responsive/mobile view */
-@media (max-width: 768px) {
-  .right-section {
-    width: 90%; /* Take up most of the screen width but leave some margin */
-    max-width: 100%; /* Allow the container to shrink on very small screens */
-    justify-content: center; /* Center the flex items horizontally */
-    align-items: center; /* Center the flex items vertically */
-    padding: 16px; /* Slightly smaller padding on mobile */
-    margin-top: 15px; /* Add some space at the top */
-    margin-bottom: 15px; /* Add some space at the bottom */
-  }
-}
-
-/* For extra small screens */
-@media (max-width: 425px) {
-  .right-section {
-    width: 95%; /* Take up even more of the screen width */
-    padding: 12px; /* Even smaller padding on very small screens */
-    margin-right:55px;
-    
-  }
-}
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          max-width: 517px;
+          width: 100%;
+          padding: 16px;
+          background-color: white;
+          border-radius: 25px;
+          margin: 0 auto;
+          justify-content: center;
+        }
 
         .title {
           font-size: 24px;
@@ -152,9 +130,7 @@ const StudentsMasters = () => {
           position: relative;
           width: 100%;
           max-width: 300px;
-     
         }
-    
 
         .search-icon {
           position: absolute;
@@ -173,16 +149,17 @@ const StudentsMasters = () => {
           border-radius: 20px;
           font-size: 14px;
         }
-          .search-bar::placeholder {
-  color: rgba(0, 0, 0, 0.25);
-}
+
+        .search-bar::placeholder {
+          color: rgba(0, 0, 0, 0.25);
+        }
 
         .filter-button {
           display: inline-flex;
           align-items: center;
           justify-content: center;
           gap: 6px;
-          padding: 10px 20px;
+          padding: 8px 16px;
           border: 1px solid #E8E8E8;
           border-radius: 30px;
           background-color: #FFFFFF;
@@ -191,9 +168,10 @@ const StudentsMasters = () => {
           cursor: pointer;
           transition: background-color 0.2s, border-color 0.2s, color 0.2s;
           box-sizing: border-box;
-          white-space: nowrap;
+ IS         white-space: nowrap;
           text-align: center;
           text-decoration: none;
+          flex: 1 1 calc(33.33% - 8px); /* Adjust button width for smaller screens */
         }
 
         .filter-button.active {
@@ -220,15 +198,173 @@ const StudentsMasters = () => {
           -webkit-box-orient: vertical;
         }
 
-        @media (max-width: 768px) {
+        /* Responsive Design */
+        @media (max-width: 1024px) {
           .top-section {
-            gap: 20px;
+            gap: 15px;
           }
           .left-section {
             min-width: 100%;
           }
           .right-section {
-            justify-content: center;
+            max-width: 100%;
+            padding: 12px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .students-masters {
+            padding: 16px;
+          }
+          .right-section {
+            gap: 6px;
+            padding: 10px;
+          }
+          .filter-button {
+            flex: 1 1 calc(50% - 6px); /* Two buttons per row */
+            padding: 6px 12px;
+            font-size: 11px;
+          }
+          .title {
+            font-size: 20px;
+          }
+          .description {
+            font-size: 13px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .students-masters {
+            padding: 12px;
+          }
+          .left-section {
+            min-width: 100%;
+          }
+         .right-section {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          max-width: 517px;
+          width: 100%;
+          padding: 16px;
+          background-color: white;
+          border-radius: 25px;
+          margin: 0 auto;
+          justify-content: center;
+        }
+           .filter-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          padding: 8px 16px;
+          border: 1px solid #E8E8E8;
+          border-radius: 30px;
+          background-color: #FFFFFF;
+          font-size: 12px;
+          color: #444;
+          cursor: pointer;
+          transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+          box-sizing: border-box;
+ IS         white-space: nowrap;
+          text-align: center;
+          text-decoration: none;
+          flex: 1 1 calc(33.33% - 8px); /* Adjust button width for smaller screens */
+        }
+          .title {
+            font-size: 18px;
+          }
+          .description {
+            font-size: 12px;
+          }
+          .search-bar-wrapper {
+            max-width: 100%;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .students-masters {
+            padding: 10px;
+          }
+          .right-section {
+            gap: 4px;
+            padding: 6px;
+          }
+          .filter-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          padding: 8px 16px;
+          border: 1px solid #E8E8E8;
+          border-radius: 30px;
+          background-color: #FFFFFF;
+          font-size: 12px;
+          color: #444;
+          cursor: pointer;
+          transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+          box-sizing: border-box;
+ IS         white-space: nowrap;
+          text-align: center;
+          text-decoration: none;
+          flex: 1 1 calc(33.33% - 8px); /* Adjust button width for smaller screens */
+        }
+          .filter-button img {
+            width: 16px;
+            height: 16px;
+          }
+          .title {
+            font-size: 16px;
+          }
+          .description {
+            font-size: 11px;
+          }
+        }
+
+        @media (max-width: 320px) {
+          .students-masters {
+            padding: 8px;
+          }
+          .right-section {
+            gap: 3px;
+            padding: 5px;
+          }
+           .filter-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          padding: 8px 16px;
+          border: 1px solid #E8E8E8;
+          border-radius: 30px;
+          background-color: #FFFFFF;
+          font-size: 12px;
+          color: #444;
+          cursor: pointer;
+          transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+          box-sizing: border-box;
+ IS         white-space: nowrap;
+          text-align: center;
+          text-decoration: none;
+          flex: 1 1 calc(33.33% - 8px); /* Adjust button width for smaller screens */
+        }
+          .filter-button img {
+            width: 14px;
+            height: 14px;
+          }
+          .title {
+            font-size: 14px;
+          }
+          .description {
+            font-size: 10px;
+          }
+          .search-bar {
+            padding: 6px 10px 6px 30px;
+            font-size: 12px;
+          }
+          .search-icon {
+            width: 16px;
+            height: 16px;
           }
         }
       `}</style>

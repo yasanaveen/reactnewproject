@@ -90,6 +90,7 @@ const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   position: relative;
+  margin-left: 80px;
 
   @media (max-width: 768px) {
     max-width: 60%;
@@ -134,6 +135,7 @@ const SearchBar = styled.input`
   border: 1px solid #e2e8f0;
   background: #FFFFFF;
   border-radius: 26px;
+
   font-size: 14px;
   box-shadow: 0px 0px 0px 3px #F5F6F7;
 

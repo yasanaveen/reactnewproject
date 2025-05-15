@@ -276,11 +276,11 @@ const Sidebar = () => {
       >
         {/* Drag messages */}
         <div className="drag-message" style={{ opacity: isExpanded ? 0 : 1 }}>
-            <ChevronUp />
+           <ChevronUp style={{ width: "18px", height: "20px" }} />
           Drag up to see full menu
         </div>
         <div className="drag-message" style={{ opacity: isExpanded ? 1 : 0 }}>
-          <ChevronDown /> 
+          <ChevronDown style={{ width: "18px", height: "20px" }}/> 
           Drag down to see full menu
         </div>
         <h2 className="sidebar-title">Modules</h2>
