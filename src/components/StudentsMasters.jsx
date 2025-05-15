@@ -106,7 +106,7 @@ const StudentsMasters = () => {
           flex-wrap: wrap;
           gap: 8px;
           max-width: 517px;
-          width: 100%;
+          width: 915px;
           padding: 16px;
           background-color: white;
           border-radius: 25px;
@@ -121,9 +121,10 @@ const StudentsMasters = () => {
         }
 
         .description {
-          font-size: 14px;
-          color: #666;
-          margin-bottom: 16px;
+          font-size: 16px;
+          color: #6E7C87;
+          margin-bottom: 13px;
+          width:479px;
         }
 
         .search-bar-wrapper {
