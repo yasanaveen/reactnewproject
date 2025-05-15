@@ -104,14 +104,15 @@ const StudentsMasters = () => {
         .right-section {
           display: flex;
           flex-wrap: wrap;
-          gap: 8px;
+          gap: 9px;
           max-width: 517px;
-          width: 915px;
+         
           padding: 16px;
           background-color: white;
           border-radius: 25px;
           margin: 0 auto;
           justify-content: center;
+          margin-left: 164px;
         }
 
         .title {
@@ -173,6 +174,8 @@ const StudentsMasters = () => {
           text-align: center;
           text-decoration: none;
           flex: 1 1 calc(33.33% - 8px); /* Adjust button width for smaller screens */
+          width:121px;
+          height: 48px;
         }
 
         .filter-button.active {
