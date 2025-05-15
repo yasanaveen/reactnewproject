@@ -245,7 +245,7 @@ const StudentsMasters = () => {
           flex-wrap: wrap;
           gap: 8px;
           max-width: 517px;
-          width: 100%;
+          width: 80%;
           padding: 16px;
           background-color: white;
           border-radius: 25px;
