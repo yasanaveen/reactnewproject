@@ -703,6 +703,8 @@ const CityManagementPage = () => {
           table-layout: auto;
           border-collapse: collapse;
           background-color: #f8f9fa;
+          overflow-x: auto;
+          max-width:100%;
         }
 
         .table-container th,
@@ -740,7 +742,14 @@ const CityManagementPage = () => {
 
         .checkbox-column {
           width: 40px;
-        }
+          position: sticky;
+          left: 0; /* Fixes the column to the left edge */
+           background: white; /* Prevents background overlap */
+          z-index: 1; /* Ensures the column stays above other content */
+          text-align: center; /* Center the checkbox */
+        } 
+
+        
 
         .checkbox-column input[type="checkbox"] {
           background: rgba(255, 255, 255, 1);
@@ -750,6 +759,8 @@ const CityManagementPage = () => {
           appearance: none;
           cursor: pointer;
           border-radius: 4px;
+          display: inline-block;
+         vertical-align: middle;
         }
 
         .checkbox-column input[type="checkbox"]:checked {

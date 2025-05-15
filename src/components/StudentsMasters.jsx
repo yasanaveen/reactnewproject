@@ -215,162 +215,54 @@ const StudentsMasters = () => {
             padding: 12px;
           }
         }
+          /* New @media query for max-width: 360px */
+@media (max-width: 360px) {
+  .students-masters {
+    padding: 10px;
+  }
 
-        @media (max-width: 768px) {
-          .students-masters {
-            padding: 16px;
-          }
-          .right-section {
-            gap: 6px;
-            padding: 10px;
-          }
-          .filter-button {
-            flex: 1 1 calc(50% - 6px); /* Two buttons per row */
-            padding: 6px 12px;
-            font-size: 11px;
-          }
-          .title {
-            font-size: 20px;
-          }
-          .description {
-            font-size: 13px;
-          }
-        }
+  .right-section {
+  display:flex;
+margin-left: -10px;
+    gap: 4px;
+    padding: 6px;
+    width:340px;
+    height: 210px
+  }
 
-        @media (max-width: 480px) {
-          .students-masters {
-            padding: 12px;
-          }
-          .left-section {
-            min-width: 100%;
-          }
-         .right-section {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-          max-width: 517px;
-          width: 80%;
-          padding: 16px;
-          background-color: white;
-          border-radius: 25px;
-          margin: 0 auto;
-          justify-content: center;
-        }
-           .filter-button {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          gap: 6px;
-          padding: 8px 16px;
-          border: 1px solid #E8E8E8;
-          border-radius: 30px;
-          background-color: #FFFFFF;
-          font-size: 12px;
-          color: #444;
-          cursor: pointer;
-          transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-          box-sizing: border-box;
- IS         white-space: nowrap;
-          text-align: center;
-          text-decoration: none;
-          flex: 1 1 calc(33.33% - 8px); /* Adjust button width for smaller screens */
-        }
-          .title {
-            font-size: 18px;
-          }
-          .description {
-            font-size: 12px;
-          }
-          .search-bar-wrapper {
-            max-width: 100%;
-          }
-        }
+  .filter-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border: 1px solid #E8E8E8;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    color: #444;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+    flex: 1 1 calc(33.33% - 8px);
+  }
 
-        @media (max-width: 360px) {
-          .students-masters {
-            padding: 10px;
-          }
-          .right-section {
-            gap: 4px;
-            padding: 6px;
-          }
-          .filter-button {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          gap: 6px;
-          padding: 8px 16px;
-          border: 1px solid #E8E8E8;
-          border-radius: 30px;
-          background-color: #FFFFFF;
-          font-size: 12px;
-          color: #444;
-          cursor: pointer;
-          transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-          box-sizing: border-box;
- IS         white-space: nowrap;
-          text-align: center;
-          text-decoration: none;
-          flex: 1 1 calc(33.33% - 8px); /* Adjust button width for smaller screens */
-        }
-          .filter-button img {
-            width: 16px;
-            height: 16px;
-          }
-          .title {
-            font-size: 16px;
-          }
-          .description {
-            font-size: 11px;
-          }
-        }
+  .filter-button img {
+    width: 16px;
+    height: 16px;
+  }
 
-        @media (max-width: 320px) {
-          .students-masters {
-            padding: 8px;
-          }
-          .right-section {
-            gap: 3px;
-            padding: 5px;
-          }
-           .filter-button {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          gap: 6px;
-          padding: 8px 16px;
-          border: 1px solid #E8E8E8;
-          border-radius: 30px;
-          background-color: #FFFFFF;
-          font-size: 12px;
-          color: #444;
-          cursor: pointer;
-          transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-          box-sizing: border-box;
- IS         white-space: nowrap;
-          text-align: center;
-          text-decoration: none;
-          flex: 1 1 calc(33.33% - 8px); /* Adjust button width for smaller screens */
-        }
-          .filter-button img {
-            width: 14px;
-            height: 14px;
-          }
-          .title {
-            font-size: 14px;
-          }
-          .description {
-            font-size: 10px;
-          }
-          .search-bar {
-            padding: 6px 10px 6px 30px;
-            font-size: 12px;
-          }
-          .search-icon {
-            width: 16px;
-            height: 16px;
-          }
-        }
+  .title {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 11px;
+  }
+}
       `}</style>
 
       <div>
