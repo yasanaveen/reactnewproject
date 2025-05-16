@@ -110,7 +110,6 @@ const StudentsMasters = () => {
           // gap: 12px 16px;
           // min-width: 200px;
           // margin-left: 0;
-
           display: flex;
   /* margin-left: 340px; */
   flex-wrap: wrap;
@@ -130,9 +129,12 @@ const StudentsMasters = () => {
         }
  
         .description {
-          font-size: 14px;
+          font-size: 16px;
           color: #666;
           margin-bottom: 16px;
+          fontFamily:'system-ui';
+          font-weight: 400;
+          lineheight:'24px';
         }
  
         .search-bar-wrapper {
@@ -251,6 +253,8 @@ const StudentsMasters = () => {
  
           .title {
             font-size: 22px;
+            Height: 48px;
+            width:479px;
           }
  
           .description {
