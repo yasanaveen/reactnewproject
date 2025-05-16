@@ -350,7 +350,7 @@ const StudentsMasters = () => {
    .right-section {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px 20px;
+            gap: 25px 10px;
             width: 100%;
             margin-left: 0;
             justify-content: flex-start;
