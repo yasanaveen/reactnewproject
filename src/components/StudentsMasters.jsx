@@ -104,12 +104,22 @@ const StudentsMasters = () => {
         }
  
         .right-section {
-          flex: 2;
+          // flex: 2;
+          // display: flex;
+          // flex-wrap: wrap;
+          // gap: 12px 16px;
+          // min-width: 200px;
+          // margin-left: 0;
+
           display: flex;
-          flex-wrap: wrap;
-          gap: 12px 16px;
-          min-width: 200px;
-          margin-left: 0;
+  /* margin-left: 340px; */
+  flex-wrap: wrap;
+  gap: 5px;
+   max-width: 517px;
+  width:460px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 25px;
         }
  
         .title {
