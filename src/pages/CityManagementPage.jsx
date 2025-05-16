@@ -360,7 +360,6 @@ const CityManagementPage = () => {
   };
 
   const handleEditCity = () => {
-    // For now, we'll just close the view form. You can extend this to open an edit form if needed.
     setShowViewForm(false);
     setSelectedCity(null);
   };
@@ -374,9 +373,9 @@ const CityManagementPage = () => {
             <div className="filter-container" ref={filterRef}>
               <button className="action-button" onClick={() => setIsFilterOpen(!isFilterOpen)}>
                 {Object.values(filters).some((value) => value !== '') ? (
-                  <IoIosFunnel className="icon" style={{ marginRight: '6px', width:'24', height:'24' }} />
+                  <IoIosFunnel className="icon" style={{ marginRight: '6px', width: '24', height: '24' }} />
                 ) : (
-                  <Funnel className="icon" style={{ marginRight: '6px',width:'24', height:'24'}} />
+                  <Funnel className="icon" style={{ marginRight: '6px', width: '24', height: '24' }} />
                 )}
                 Filter
                 {Object.values(filters).filter((value) => value !== '').length > 0 && (
@@ -430,11 +429,11 @@ const CityManagementPage = () => {
               )}
             </div>
             <button className="action-button">
-              <ArrowUp className="icon" style={{ marginRight: '6px',width:'24',height:'24' }} />
+              <ArrowUp className="icon" style={{ marginRight: '6px', width: '24', height: '24' }} />
               Export
             </button>
             <button className="action-button primary" onClick={() => setShowForm(true)}>
-              <Plus className="icon" style={{ marginRight: '6px',width:'24', height:'24' }} />
+              <Plus className="icon" style={{ marginRight: '6px', width: '24', height: '24' }} />
               Add New Field
             </button>
           </div>
@@ -527,7 +526,10 @@ const CityManagementPage = () => {
             <div className="pagination-content">
               <div className="pagination-numbers">
                 {[1, 2, 3, '...', 8, 9, 10].map((page, index) => (
-                  <button key={index} className={`pagination-button ${page === 1 ? 'active' : ''}`}>
+                  <button
+                    key={index}
+                    className={`pagination-button ${page === 1 ? 'active' : ''}`}
+                  >
                     {page}
                   </button>
                 ))}
@@ -686,16 +688,14 @@ const CityManagementPage = () => {
         .table-wrapper {
           width: 1210px;
           height: 644px;
-          overflow: auto;
+          overflow-x: auto;
+          overflow-y: auto;
           margin: 0 auto;
           position: relative;
         }
-          
-       
 
         .table-inner {
           width: 1320px;
-          overflow: hidden;
         }
 
         .table-container {
@@ -703,8 +703,7 @@ const CityManagementPage = () => {
           table-layout: auto;
           border-collapse: collapse;
           background-color: #f8f9fa;
-          overflow-x: auto;
-          max-width:100%;
+          max-width: 100%;
         }
 
         .table-container th,
@@ -726,7 +725,7 @@ const CityManagementPage = () => {
         .table-container th {
           background-color: #f8f9fa;
           font-weight: 600;
-          font-size: 14px; 
+          font-size: 14px;
           position: sticky;
           top: 0;
           z-index: 1;
@@ -742,31 +741,35 @@ const CityManagementPage = () => {
 
         .checkbox-column {
           width: 40px;
-          
-          left: 0; /* Fixes the column to the left edge */
-           background: white; /* Prevents background overlap */
-          z-index: 1; /* Ensures the column stays above other content */
-          text-align: center; /* Center the checkbox */
-        } 
+          position: sticky;
+          left: 0;
+          background: #f8f9fa;
+          z-index: 2;
+          text-align: center;
+        }
 
-        
+        .table-container th.checkbox-column {
+          position: sticky;
+          left: 0;
+          top: 0;
+          z-index: 3;
+          background: #f8f9fa;
+        }
 
         .checkbox-column input[type="checkbox"] {
           background: rgba(255, 255, 255, 1);
           border: 1px solid rgba(208, 213, 221, 1);
           width: 16px;
-          
           height: 16px;
           appearance: none;
           cursor: pointer;
           border-radius: 4px;
           display: inline-block;
-         vertical-align: middle;
+          vertical-align: middle;
         }
 
         .checkbox-column input[type="checkbox"]:checked {
           background: rgba(255, 255, 255, 1);
-         
           border: 1px solid rgba(208, 213, 221, 1);
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
           background-size: cover;
@@ -837,7 +840,7 @@ const CityManagementPage = () => {
           padding: 10px 20px;
           box-sizing: border-box;
           z-index: 100;
-          border: 1px solid rgba(234, 236, 240, 1)
+          border: 1px solid rgba(234, 236, 240, 1);
         }
 
         .pagination-content {
@@ -854,8 +857,7 @@ const CityManagementPage = () => {
           font-size: 14px;
           padding: 8px 12px;
           cursor: pointer;
-          border: 1px solid rgba(234, 236, 240, 1)
-          //border: 1px solid #ccc;
+          border: 1px solid rgba(234, 236, 240, 1);
           border-radius: 5px;
         }
 
@@ -867,39 +869,34 @@ const CityManagementPage = () => {
           display: flex;
           align-items: center;
           gap: 2px;
-          
         }
 
         .pagination-numbers button {
           width: 40px;
           height: 40px;
-      border: 1px solid rgba(234, 236, 240, 1)
-          color:1px solid rgba(234, 236, 240, 1)
-
+          border: 1px solid rgba(234, 236, 240, 1);
           font-size: 16px;
           cursor: pointer;
-          border: none;
           border-radius: 8px;
           display: flex;
           justify-content: center;
           align-items: center;
         }
 
-.pagination-numbers button.active {
-  background: rgba(245, 247, 255, 1);
-  color: rgba(52, 37, 255, 1);
-  font-weight: 600;
-}
+        .pagination-numbers button.active {
+          background: rgba(245, 247, 255, 1);
+          color: rgba(52, 37, 255, 1);
+          font-weight: 600;
+        }
 
-     .previous {
-  position: absolute;
-  left: 40px;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(208, 213, 221, 1); 
-  margin-left: 260px;
-}
-
+        .previous {
+          position: absolute;
+          left: 40px;
+          font-size: 14px;
+          background: rgba(255, 255, 255, 1);
+          border: 1px solid rgba(208, 213, 221, 1);
+          margin-left: 260px;
+        }
 
         .next {
           position: absolute;
@@ -930,7 +927,6 @@ const CityManagementPage = () => {
           justify-content: space-between;
           align-items: center;
           margin-bottom: 32px;
-          // border-bottom: 1px solid #e0e0e0;
           padding-bottom: 10px;
         }
 
@@ -967,7 +963,6 @@ const CityManagementPage = () => {
           border: 1px solid #ddd;
           border-radius: 8px;
           font-size: 14px;
-         
           box-sizing: border-box;
         }
 
@@ -985,7 +980,7 @@ const CityManagementPage = () => {
           display: block;
           font-size: 12px;
           font-weight: 500;
-           color: rgba(52, 64, 84, 1);  
+          color: rgba(52, 64, 84, 1);
           margin-bottom: 5px;
         }
 
@@ -1066,23 +1061,24 @@ const CityManagementPage = () => {
         .edit-button:hover {
           opacity: 0.9;
         }
-          @media (max-width: 1440px) {
-     .table-inner {
-      min-width: 600px; /* Reduce min-width to fit better */
-  }
-}
 
-@media (max-width: 1024px) {
-  .table-inner {
-    min-width: 800px;
-  }
-}
+        @media (max-width: 1440px) {
+          .table-inner {
+            min-width: 600px;
+          }
+        }
 
-@media (max-width: 768px) {
-  .table-inner {
-    min-width: 600px;
-  }
-}
+        @media (max-width: 1024px) {
+          .table-inner {
+            min-width: 800px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .table-inner {
+            min-width: 600px;
+          }
+        }
       `}</style>
     </div>
   );
