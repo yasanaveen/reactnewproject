@@ -752,7 +752,7 @@ const CityManagementPage = () => {
           position: sticky;
           left: 0;
           top: 0;
-          z-index: 3;
+           z-index: 2;
           background: #f8f9fa;
         }
 
