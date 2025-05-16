@@ -203,7 +203,7 @@ const Sidebar = () => {
             height: 100%;
             overflow: hidden; /* Prevent scrolling in collapsed state */
             align-content: start; /* Align items to top */
-            margin-top: 6px; /* Reserve space for drag message */
+            margin-top: 16px; /* Reserve space for drag message */
           }
  
           .menu-item {
